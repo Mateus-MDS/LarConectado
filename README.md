@@ -1,4 +1,4 @@
-LarConectado
+LarConectado: 
 Automação Residencial com Raspberry Pi Pico W
 
 Descrição
