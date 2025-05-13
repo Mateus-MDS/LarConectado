@@ -1,5 +1,4 @@
-LarConectado: 
-Automação Residencial com Raspberry Pi Pico W
+LarConectado: Automação Residencial com Raspberry Pi Pico W
 
 Descrição
 LarConectado é um sistema de automação residencial baseado na Raspberry Pi Pico W que permite o controle de LEDs, exibição de temperatura, e monitoramento de sensores por meio de uma interface web, sem uso de bibliotecas externas, utilizando a pilha TCP/IP lwIP diretamente.
