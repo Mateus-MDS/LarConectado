@@ -1,19 +1,19 @@
-?? LarConectado
-AutomaÁ„o Residencial com Raspberry Pi Pico W
+LarConectado
+Automa√ß√£o Residencial com Raspberry Pi Pico W
 
-?? DescriÁ„o
-LarConectado È um sistema de automaÁ„o residencial baseado na Raspberry Pi Pico W que permite o controle de LEDs, exibiÁ„o de temperatura, e monitoramento de sensores por meio de uma interface web, sem uso de bibliotecas externas, utilizando a pilha TCP/IP lwIP diretamente.
+Descri√ß√£o
+LarConectado √© um sistema de automa√ß√£o residencial baseado na Raspberry Pi Pico W que permite o controle de LEDs, exibi√ß√£o de temperatura, e monitoramento de sensores por meio de uma interface web, sem uso de bibliotecas externas, utilizando a pilha TCP/IP lwIP diretamente.
 
-O sistema tambÈm inclui um display OLED SSD1306, sensores de ambiente como ultrassÙnico e LDR, uma matriz de LEDs 5x5 via PIO, e monitora a temperatura interna do chip RP2040.
+O sistema tamb√©m inclui um display OLED SSD1306, sensores de ambiente como ultrass√¥nico e LDR, uma matriz de LEDs 5x5 via PIO, e monitora a temperatura interna do chip RP2040.
 
-?? Objetivos
-Controlar LEDs remotamente por p·gina web.
+Objetivos
+Controlar LEDs remotamente por p√°gina web.
 
 Exibir a temperatura interna da Pico via navegador.
 
-Monitorar iluminaÁ„o ambiente (LDR) e presenÁa (ultrassÙnico).
+Monitorar ilumina√ß√£o ambiente (LDR) e presen√ßa (ultrass√¥nico).
 
-Representar informaÁıes visuais com matriz de LEDs 5x5.
+Representar informa√ß√µes visuais com matriz de LEDs 5x5.
 
 Exibir status e dados no OLED SSD1306.
 
@@ -21,59 +21,59 @@ Prover interface web responsiva sem uso de bibliotecas externas.
 
 Rodar servidor TCP/IP com lwIP direto na Pico W.
 
-?? Componentes Utilizados
-Componente	Pinos	FunÁ„o
+Componentes Utilizados
+Componente	Pinos	Fun√ß√£o
 
 Raspberry Pi Pico W	-	Microcontrolador com Wi-Fi
-LED (x2 ou mais) - GPIOs livres (ex: GP2, GP3) - Atuadores de saÌda controlados via web
-Display OLED SSD1306 - I≤C - GP14 (SDA), GP15 (SCL) - ExibiÁ„o local de dados
-Sensor UltrassÙnico HC-SR04	GP16 (TRIG), GP17 (ECHO) - DetecÁ„o de objeto proximo
-Sensor LDR (com divisor) - GP26 (ADC0) - DetecÁ„o de luz ambiente
-Matriz de LEDs 5◊5	PIO - GP7	VisualizaÁ„o gr·fica de estados
-Interface Web Wi-Fi - Controle e visualizaÁ„o remota
+LED (x2 ou mais) - GPIOs livres (ex: GP2, GP3) - Atuadores de sa√≠da controlados via web
+Display OLED SSD1306 - I¬≤C - GP14 (SDA), GP15 (SCL) - Exibi√ß√£o local de dados
+Sensor Ultrass√¥nico HC-SR04	GP16 (TRIG), GP17 (ECHO) - Detec√ß√£o de objeto proximo
+Sensor LDR (com divisor) - GP26 (ADC0) - Detec√ß√£o de luz ambiente
+Matriz de LEDs 5√ó5	PIO - GP7	Visualiza√ß√£o gr√°fica de estados
+Interface Web Wi-Fi - Controle e visualiza√ß√£o remota
 
-?? Funcionamento
-?? InicializaÁ„o
-ConfiguraÁ„o de GPIOs, ADC, PIO e perifÈricos.
+Funcionamento
+Inicializa√ß√£o
+Configura√ß√£o de GPIOs, ADC, PIO e perif√©ricos.
 
-InicializaÁ„o do display OLED.
+Inicializa√ß√£o do display OLED.
 
-Conex„o ‡ rede Wi-Fi.
+Conex√£o √† rede Wi-Fi.
 
-InicializaÁ„o da pilha lwIP para serviÁo TCP/IP.
+Inicializa√ß√£o da pilha lwIP para servi√ßo TCP/IP.
 
 Upload e parsing do HTML embutido para servidor web.
 
-??? Interface Web
-P·gina HTML simples acessÌvel via IP da Pico.
+Interface Web
+P√°gina HTML simples acess√≠vel via IP da Pico.
 
 Exibe:
 
 Temperatura interna (atualizada dinamicamente).
 
-Botıes para acender/apagar LEDs.
+Bot√µes para acender/apagar LEDs.
 
-ComunicaÁ„o por sockets TCP/HTTP diretos via lwIP.
+Comunica√ß√£o por sockets TCP/HTTP diretos via lwIP.
 
-??? Leitura e Monitoramento
-Sensor UltrassÙnico: dist‚ncia medida periodicamente.
+Leitura e Monitoramento
+Sensor Ultrass√¥nico: dist√¢ncia medida periodicamente.
 
-Sensor LDR: leitura analÛgica para avaliar luminosidade.
+Sensor LDR: leitura anal√≥gica para avaliar luminosidade.
 
-Temperatura Interna: leitura do sensor tÈrmico do RP2040.
+Temperatura Interna: leitura do sensor t√©rmico do RP2040.
 
-?? Estrutura do CÛdigo
+Estrutura do C√≥digo
 Wi-Fi & lwIP Setup
 
 Inicializa interface de rede.
 
 Configura IP fixo ou DHCP.
 
-Inicia servidor HTTP b·sico.
+Inicia servidor HTTP b√°sico.
 
 Drivers
 
-OLED SSD1306 via I≤C.
+OLED SSD1306 via I¬≤C.
 
 Matriz de LEDs via PIO.
 
@@ -81,9 +81,9 @@ Leitura ADC e sensores digitais.
 
 Web Server
 
-Serve HTML est·tico com rotas HTTP simples.
+Serve HTML est√°tico com rotas HTTP simples.
 
-Mapeia comandos de botıes para GPIOs.
+Mapeia comandos de bot√µes para GPIOs.
 
 Main Loop
 
@@ -91,36 +91,36 @@ Atualiza sensores.
 
 Atualiza OLED e LED matrix.
 
-Processa requisiÁıes HTTP.
+Processa requisi√ß√µes HTTP.
 
 ?? Como Executar o Projeto
 Monte os componentes conforme a tabela de pinos.
 
-Configure suas credenciais de Wi-Fi no cÛdigo.
+Configure suas credenciais de Wi-Fi no c√≥digo.
 
-Compile o firmware com suporte ‡ pilha lwIP (sem RTOS).
+Compile o firmware com suporte √† pilha lwIP (sem RTOS).
 
 Grave o firmware na Pico W.
 
-Acesse o IP atribuÌdo ‡ Pico na sua rede local pelo navegador.
+Acesse o IP atribu√≠do √† Pico na sua rede local pelo navegador.
 
 Use a interface para controlar LEDs e visualizar dados ao vivo.
 
-??? Requisitos
+Requisitos
 Raspberry Pi Pico W
 
 SDK do Raspberry Pi Pico configurado
 
 lwIP (sem RTOS, modo standalone)
 
-Display OLED compatÌvel com SSD1306
+Display OLED compat√≠vel com SSD1306
 
-Sensor LDR, UltrassÙnico HC-SR04, LEDs
+Sensor LDR, Ultrass√¥nico HC-SR04, LEDs
 
-?? RepositÛrio
-GitHub: github.com/Mateus-MDS/LarConectado (Link fictÌcio ? atualize se necess·rio)
+Reposit√≥rio
+GitHub: github.com/Mateus-MDS/LarConectado (Link fict√≠cio ? atualize se necess√°rio)
 
-????? Autor
+Autor
 Nome: Mateus Moreira da Silva
 
 
