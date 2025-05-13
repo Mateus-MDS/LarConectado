@@ -93,7 +93,7 @@ Atualiza OLED e LED matrix.
 
 Processa requisições HTTP.
 
-?? Como Executar o Projeto
+Como Executar o Projeto
 Monte os componentes conforme a tabela de pinos.
 
 Configure suas credenciais de Wi-Fi no código.
@@ -118,7 +118,7 @@ Display OLED compatível com SSD1306
 Sensor LDR, Ultrassônico HC-SR04, LEDs
 
 Repositório
-GitHub: github.com/Mateus-MDS/LarConectado (Link fictício ? atualize se necessário)
+GitHub: https://github.com/Mateus-MDS/LarConectado.git
 
 Autor
 Nome: Mateus Moreira da Silva
